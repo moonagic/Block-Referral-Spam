@@ -8,7 +8,11 @@ git clone https://github.com/moonagic/block-referral-spam.git
 ```
 * Add to server block in nginx config
 ```bash
-include path/to/block-referral-spam.conf
+server {
+    ...
+    include [path/to/block-referral-spam.conf]
+    ...
+}
 ```
 * Then reload your nginx
 ```bash
