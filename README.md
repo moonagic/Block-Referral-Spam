@@ -5,18 +5,21 @@ Block referral spam with nginx config
 * Clone to your server
 ```bash
 git clone https://github.com/moonagic/block-referral-spam.git
+cd block-referral-spam
+git submodule update --init --recursive
+./general.sh
 ```
 * Add to server block in nginx config
 ```bash
 server {
     ...
-    include [path/to/block-referral-spam.conf]
+    include [path/to/referer-spam.conf]
     ...
 }
 ```
 * Then reload your nginx
 ```bash
-nginx reload
+systemctl reload nginx
 ```
 
 # Thanks to 
